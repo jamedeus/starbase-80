@@ -177,9 +177,9 @@ function IconBase(props: IIconBaseProps) {
 			icon = icon.replace("mdi-", "").replace(".svg", "");
 
 			return `
-				<span class="${iconClassName || ""}" style="${unwrapStyles(iconStyle)}">
+				<span class="relative ${iconClassName || ""}" style="${unwrapStyles(iconStyle)}">
 					<span
-						class="block ${iconWidthHeightClassName} ${mdiIconColorFull} overflow-hidden"
+						class="absolute block ${mdiIconColorFull} h-full w-full overflow-hidden"
 						style="${unwrapStyles(
 							mdiIconStyle.concat([
 								`mask: url(https://cdn.jsdelivr.net/npm/@mdi/svg@latest/svg/${icon}.svg) no-repeat center / contain`,
